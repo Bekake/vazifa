@@ -302,7 +302,8 @@ a:hover .ma{
 }
 .another{
     transform: translateX(-10px);
-    margin-top: 10px
+    margin-top: 10px;
+    width: 100%;
 }
 .myfin{
     width: 101%;
