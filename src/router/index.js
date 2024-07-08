@@ -1,5 +1,14 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import Bank from '../views/bank.vue'
+import Calendar from '../views/calendar.vue'
+import Contacts from '../views/contacts.vue'
+import Crypto from '../views/crypto.vue'
+import File from '../views/file.vue'
+import Invoice from '../views/invoice.vue'
+import Kanban from '../views/kanban.vue'
+import Todo from '../views/todo.vue'
+import Mail from '../views/AboutView.vue'
 
 const routes = [
   {
@@ -8,12 +17,49 @@ const routes = [
     component: HomeView
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    path: '/bank',
+    name: 'bank',
+    component: Bank
+  },
+  {
+    path: '/todo',
+    name: 'todo',
+    component: Todo
+  },
+  {
+    path: '/kanban',
+    name: 'kanban',
+    component: Kanban
+  },
+  {
+    path: '/invoice',
+    name: 'invoice',
+    component: Invoice
+  },
+  {
+    path: '/file',
+    name: 'file',
+    component: File
+  },
+  {
+    path: '/crypto',
+    name: 'crypto',
+    component: Crypto
+  },
+  {
+    path: '/contacts',
+    name: 'contacts',
+    component: Contacts
+  },
+  {
+    path: '/calendar',
+    name: 'calendar',
+    component: Calendar
+  },
+  {
+    path: '/mail',
+    name: 'mail',
+    component: Mail
   }
 ]
 

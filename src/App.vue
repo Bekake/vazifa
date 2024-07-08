@@ -1,30 +1,59 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <bar/>
 </template>
-
+<script>
+import bar from "@/components/bar.vue"
+export default{
+  components:{bar}
+}
+</script>
 <style>
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.chat{
+  border-radius: 12px;
+}
+button, a{
+  cursor: pointer;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  background-color: rgb(240, 240, 240);
 }
-
-nav {
-  padding: 30px;
+.container, .forcircle, .gcont>div:first-child, .chat,
+.chart-containe, .coin, .myfin, .my>div, .fcont, .ycontainer, 
+.category>div, .people, table{
+  background-color: white;
+  border-radius: 12px;
 }
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
+.fade-leave-active {
+  animation: leaving 0.8s;
 }
-
-nav a.router-link-exact-active {
-  color: #42b983;
+.fade-enter-active {
+  animation: entering 0.8s;
+}
+@keyframes leaving {
+  0% {
+    opacity: 1;
+    transform: scale(1) ;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0) ;
+  }
+}
+@keyframes entering {
+  0% {
+    opacity: 0;
+    transform: scale(0) ;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) 
+  }
 }
 </style>
+
